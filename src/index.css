@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* *{
+    background-color: white;
+    color: black;
+} */
+
+@media screen and (max-width:700px) {
+    .flexR{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .hide{
+        display:none
+    }
+}
