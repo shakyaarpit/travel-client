@@ -98,7 +98,7 @@ let [typeData , setTypeData] = useState("temple")
                   <span className=" text-amber-500 p-2 rounded-[10px]">
                     Price
                   </span>{" "}
-                  : {allplace.price}{" "}
+                  : {allplace.price}{" "} per person
                 </h2>
 
                 <p>
