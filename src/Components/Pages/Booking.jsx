@@ -31,7 +31,7 @@ let newName = localStorage.getItem("logedInUser")
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  },[]);
 let navigate = useNavigate()
 
   let deleteHandler = async (id)=>{
