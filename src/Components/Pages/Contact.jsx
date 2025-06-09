@@ -9,7 +9,7 @@ const Contact = () => {
     <>
     <div>
       <Heading head={"Contact Us"}/>
-      <div className=" flex flex-col lg:flex-row gap-6 justify-around items-center pt-6 pb-6  ">
+      <div className=" flex min-h-[79vh] lg:min-h-auto flex-col lg:flex-row gap-6 justify-around items-center pt-6 pb-6  ">
 
         <div>
           <figure>

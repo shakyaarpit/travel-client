@@ -7,7 +7,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
 import Heading from "../Heading";
-import { handleError, handleSuccess, handleWarn } from "../utils";
+import { handleError, handleSuccess } from "../utils";
 import { ToastContainer } from "react-toastify";
 const Booking = () => {
   let [data, setData] = useState();
@@ -52,9 +52,10 @@ window.location.reload()
       <Heading head={"Booking Details"}/>
       {data
         ? data.map((allBooking, key) => (
+          <>
             <div
               key={key}
-              className="flex capitalize   justify-around items-center p-2  bg-black "
+              className="flex capitalize   justify-around items-center p-2  "
             >
               <div className="text-[15px]">
                 <p>
@@ -100,6 +101,8 @@ window.location.reload()
                 <button onClick={()=>deleteHandler(allBooking._id)} className="btn text-amber-500"><TiDelete/></button>
               </div>
             </div>
+             <hr className="text-amber-500" />
+             </>
           ))
         : <>
           <div className="flex justify-center items-center w-full h-full  ">
@@ -114,6 +117,7 @@ window.location.reload()
         }
        
     </div>
+   
     </>
   );
 };
