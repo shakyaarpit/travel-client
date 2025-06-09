@@ -1,12 +1,9 @@
+import { Navigate } from 'react-router-dom';
 import React from "react";
-import { Navigate } from "react-router-dom";
+ export  const PrivateRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem('logedInUser'); // or use context/auth state
 
-const ProtectRoute = ({ children }) => {
-  let user = localStorage.getItem("logedInUser");
-
-  user ? children : <Navigate to="/login" />;
-
-  return children;
+  return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
-export default ProtectRoute;
+

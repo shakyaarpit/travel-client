@@ -21,9 +21,10 @@ import PlanInAdmin from "./Components/Admin/PlanInAdmin";
 import UpdatePlace from "./Components/Admin/UpdatePlace";
 import BookingUpdate from "./Components/Pages/BookingUpdate";
 import BookOrder from "./Components/Admin/BookOrder";
-import ProtectRoute from "./Components/ProtectRoute";
+// import PrivateRoute from "./Components/ProtectRoute"
 import { Slide, ToastContainer } from "react-toastify";
 import PageNot from "./Components/PageNot";
+import { PrivateRoute } from "./Components/ProtectRoute";
 
 const App = () => {
   let admin = localStorage.getItem("email");
@@ -38,17 +39,17 @@ const App = () => {
         <Route
           path="/userDetail"
           element={
-            <ProtectRoute>
+            <PrivateRoute>
               <UserDetail />
-            </ProtectRoute>
+            </PrivateRoute>
           }
         />
         <Route
           path="/booking"
           element={
-            <ProtectRoute>
+            <PrivateRoute>
               <Booking />
-            </ProtectRoute>
+            </PrivateRoute>
           }
         />
         <Route path="*" element={<PageNot/>} />
